@@ -14,12 +14,12 @@ function guessNumber (event) {
     const responseDifference = randomNumber - parseInt(inputNumberElement.value);
 
     if(responseDifference === 0){
-        tipTextElement.innerHTML = "Enhorabuena! 🎉 🎉 🎉";
+        tipTextElement.innerHTML = "Has ganado campeona!!! 🎉 🎉 🎉";
         page.classList.toggle('bg-2');
     } else if (responseDifference < 0){
-        tipTextElement.innerHTML = "Pista: Está muy alto";
+        tipTextElement.innerHTML = "Pista: Demasiado alto";
     } else {
-        tipTextElement.innerHTML = "Pista: Está muy bajo";
+        tipTextElement.innerHTML = "Pista: Demasiado bajo";
     }
 }
 
