@@ -4,6 +4,7 @@ const inputNumberElement = document.querySelector('.js-input');
 const tipTextElement = document.querySelector('.js-tips');
 let counter = 0; // Define counter initial value.
 const buttom = document.querySelector('.js-btn');
+const page = document.querySelector('.js-main');
 
 // Define ramdom number
 const randomNumber = Math.ceil(Math.random() * 100); 
@@ -14,10 +15,11 @@ function guessNumber (event) {
 
     if(responseDifference === 0){
         tipTextElement.innerHTML = "Enhorabuena! 🎉 🎉 🎉";
+        page.classList.toggle('bg-2');
     } else if (responseDifference < 0){
         tipTextElement.innerHTML = "Pista: Está muy alto";
     } else {
-        tipTextElement.innerHTML = "Pista: Está muy bajo" ;
+        tipTextElement.innerHTML = "Pista: Está muy bajo";
     }
 }
 
