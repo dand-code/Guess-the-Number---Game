@@ -2,6 +2,7 @@
 
 const inputNumberElement = document.querySelector('.js-input');
 const tipTextElement = document.querySelector('.js-tips');
+const textGameOver = document.querySelector('.js-gane_over');
 let counter = 0; // Define counter initial value.
 const buttom = document.querySelector('.js-btn');
 const page = document.querySelector('.js-main');
@@ -10,6 +11,8 @@ const page = document.querySelector('.js-main');
 const randomNumber = Math.ceil(Math.random() * 100); 
 console.log('The number is:', randomNumber);
 
+
+// Define tips text
 function guessNumber (event) {
     const responseDifference = randomNumber - parseInt(inputNumberElement.value);
     if(responseDifference === 0){
@@ -22,15 +25,6 @@ function guessNumber (event) {
     }
 }
 
-function gameOver() {
-    let delay = 1000;
-    if (counter === 2) {
-        page.classList.toggle('bg-3');
-        alert("GAME OVER - Se acabaron los intentos");
-        tipTextElement.innerHTML = "Se acabaron los intentos";
-        setTimeout(function setTime(){document.location.reload();}, delay);
-    };
-}
 
 function incrementCounter() {
     const counterElement = document.querySelector('.js-counter');
@@ -38,6 +32,18 @@ function incrementCounter() {
     counterElement.innerHTML = counter; // Show new counter value
     gameOver(); 
 }
+// Define max attempts
+function gameOver() {
+    let delay = 2000;
+    if (counter === 2) {
+        buttom.style.pointerEvents = "none";;
+        page.classList.toggle('bg-3');
+        textGameOver.innerHTML = "GAME OVER - Se acabaron los intentos";
+        setTimeout(function setTime(){document.location.reload();}, delay);
+    };
+}
+
+
 // Adding listeners to button
 buttom.addEventListener('click', (event) => { 
     event.preventDefault(); //Stop page update each click
