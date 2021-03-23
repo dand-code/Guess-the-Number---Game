@@ -38,7 +38,7 @@ function gameOver() {
     if (counter === 2) {
         buttom.style.pointerEvents = "none";;
         page.classList.toggle('bg-3');
-        textGameOver.innerHTML = '<span>GAME OVER</span><span>Se acabaron los intentos</span>';
+        textGameOver.innerHTML = '<span class="textGameOver">GAME OVER</span><span>Se acabaron los intentos</span>';
         setTimeout(function setTime(){document.location.reload();}, delay);
     };
 }
