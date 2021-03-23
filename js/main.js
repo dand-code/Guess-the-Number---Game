@@ -27,7 +27,7 @@ function guessNumber(event) {
         tipTextElement.classList.remove('start');
         tipTextElement.classList.remove('less');
     } else if (responseDifference > 0){
-        tipTextElement.classList.toggle('less');
+        tipTextElement.classList.add('less');
         tipTextElement.classList.remove('start');
         tipTextElement.classList.remove('high');
     }

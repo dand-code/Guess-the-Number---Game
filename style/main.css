@@ -68,3 +68,47 @@
 .page_game-over{
     background-color: royalblue;
 }
+
+@media all and (min-width: 768px){
+    .page{
+        display: grid;
+        grid-template-columns:10% 40% 40% 10%;
+        grid-template-rows: 15% 20% 40% auto;
+        grid-template-areas: 
+    ". . . ."
+    ". header header ."
+    ". main tips ."
+    ". . . .";
+    }
+    .header{
+        grid-area: header;
+    }
+    .main{
+        grid-area: main;
+    }
+    .tips{
+        grid-area: tips;
+    }
+}
+
+@media all and (min-width: 1000px){
+    .page{
+        display: grid;
+        grid-template-columns:30% 20% 20% 30%;
+        grid-template-rows: 15% 20% 40% auto;
+        grid-template-areas: 
+    ". . . ."
+    ". header header ."
+    ". main tips ."
+    ". . . .";
+    }
+    .header{
+        grid-area: header;
+    }
+    .main{
+        grid-area: main;
+    }
+    .tips{
+        grid-area: tips;
+    }
+}
