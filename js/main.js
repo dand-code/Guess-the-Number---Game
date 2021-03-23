@@ -63,3 +63,4 @@ buttom.addEventListener('click', (event) => {
     incrementCounter();
     guessNumber(event);
 });
+

@@ -94,7 +94,7 @@
         font-size: 40px;
     }
     .counter_text{
-        font-size: 25px; 
+        font-size: 23px; 
     }
 
     .input{
@@ -109,7 +109,7 @@
 @media all and (min-width: 1000px){
     .page{
         display: grid;
-        grid-template-columns:30% 20% 20% 30%;
+        grid-template-columns:25% 25% 25% 25%;
         grid-template-rows: 15% 20% 40% auto;
         grid-template-areas: 
     ". . . ."
