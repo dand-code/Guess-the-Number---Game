@@ -3,6 +3,36 @@
     margin: 0;
 }
 
+/* tips */
+.tips{
+    padding: 25px;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+.start{
+    background: url('../images/intentos.svg') no-repeat right top;
+    background-size: 100%;
+}
+
+.high{
+    background: url('../images/alto.svg') no-repeat right top;
+    background-size: 100%;
+}
+.less{
+    background: url('../images/bajo.svg') no-repeat right top;
+    background-size: 100%;
+}
+.win{
+    background: url('../images/has_ganado.svg') no-repeat right top;
+    background-size: 100%;
+}
+.game--over{
+    background: url('../images/game_over.svg') no-repeat right top;
+    background-size: 100%;
+}
+
+/* PAGE */
 .page{
     display: grid;
     grid-template-columns: 1fr;
@@ -33,16 +63,10 @@
     border-radius: 10px;
 }
 
-.game_image{
-    width: 300px;
+/* GAME OVER */
+.page_game-over{
+    background-color: #f6e7d8;
 }
-
-.bg-2{
-    background-color: #E74C3C;
-    color:white;
-}
-
-.bg-3{
-    background-color: deepskyblue;
-    color:white;
+.gO_color{
+    color: #f14902;
 }

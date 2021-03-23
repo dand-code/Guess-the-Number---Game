@@ -1,8 +1,8 @@
 'use strict';
 
 const inputNumberElement = document.querySelector('.js-input');
-const tipTextElement = document.querySelector('.js-tips');
-const textGameOver = document.querySelector('.js-game_over');
+
+// const textGameOver = document.querySelector('.js-game_over');
 let counter = 0; // Define counter initial value.
 const buttom = document.querySelector('.js-btn');
 const page = document.querySelector('.js-page');
@@ -11,19 +11,27 @@ const page = document.querySelector('.js-page');
 const randomNumber = Math.ceil(Math.random() * 100); 
 console.log('The number is:', randomNumber);
 
-
 // Define tips text
-function guessNumber (event) {
+function guessNumber(event) {
+    const tipTextElement = document.querySelector('.js-tips');
+    tipTextElement.classList.add('start');
     const responseDifference = randomNumber - parseInt(inputNumberElement.value);
+    let delay = 2000;
     if(responseDifference === 0){
-        tipTextElement.innerHTML = `<img class="game_image" src="./images/has_ganado.svg" alt="Has ganado!">`;
-        page.classList.toggle('bg-2');
+        tipTextElement.classList.add('win');
+        tipTextElement.classList.remove('start');
+        tipTextElement.classList.remove('high');
+        tipTextElement.classList.remove('less');
+        setTimeout(function setTime(){document.location.reload();}, delay);
+        buttom.style.pointerEvents = "none";
     } else if (responseDifference < 0){
-        tipTextElement.innerHTML = `<img class="game_image" src="./images/alto.svg" alt="EL número es demasiado alto">`;
+        tipTextElement.classList.add('high');
+        tipTextElement.classList.remove('start');
+        tipTextElement.classList.remove('less');
     } else if (responseDifference > 0){
-        tipTextElement.innerHTML = `<img class="game_image" src="./images/bajo.svg" alt="Has ganado!">`;
-    } else if (counter === 7) {
-        tipTextElement.innerHTML = '';
+        tipTextElement.classList.toggle('less');
+        tipTextElement.classList.remove('start');
+        tipTextElement.classList.remove('high');
     }
 }
 
@@ -36,11 +44,19 @@ function incrementCounter() {
 
 // Define max attempts
 function gameOver() {
+    const tipTextElement = document.querySelector('.js-tips');  
+    const pageTitle = document.querySelector('.title');
+    const counterText = document.querySelector('.counter_text');
     let delay = 2000;
     if (counter === 3) {
-        buttom.style.pointerEvents = "none";;
-        page.classList.toggle('bg-3');
-        textGameOver.innerHTML = `<img class="game_image" src="./images/game_over.svg" alt="Game over">`;
+        tipTextElement.classList.remove('start');
+        tipTextElement.classList.remove('high');
+        tipTextElement.classList.remove('less');
+        tipTextElement.classList.add('game--over');
+        page.classList.add('page_game-over');
+        pageTitle.classList.add('gO_color');
+        counterText.classList.add('gO_color');
+        buttom.style.pointerEvents = "none";
         setTimeout(function setTime(){document.location.reload();}, delay);
     };
 }
