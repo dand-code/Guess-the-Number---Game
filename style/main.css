@@ -3,14 +3,19 @@
     margin: 0;
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.page{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 130px auto;
+    row-gap: 20px;
+    text-align: center;
     align-items: center;
+    background-color: #07a5c3;
     height: 100vh;
-    background-color: #F1C40F;
+}
 
+.game__text-color{
+    color: #f6e7d8;
 }
 
 .input{
@@ -28,8 +33,8 @@
     border-radius: 10px;
 }
 
-.tips{
-    margin-bottom: 10px;;
+.game_image{
+    width: 300px;
 }
 
 .bg-2{
