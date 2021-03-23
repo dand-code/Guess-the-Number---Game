@@ -25,24 +25,23 @@ function guessNumber (event) {
     }
 }
 
-
 function incrementCounter() {
     const counterElement = document.querySelector('.js-counter');
     counter++; // Increment counter
     counterElement.innerHTML = counter; // Show new counter value
     gameOver(); 
 }
+
 // Define max attempts
 function gameOver() {
     let delay = 2000;
     if (counter === 2) {
         buttom.style.pointerEvents = "none";;
         page.classList.toggle('bg-3');
-        textGameOver.innerHTML = "GAME OVER - Se acabaron los intentos";
+        textGameOver.innerHTML = '<span>GAME OVER</span><span>Se acabaron los intentos</span>';
         setTimeout(function setTime(){document.location.reload();}, delay);
     };
 }
-
 
 // Adding listeners to button
 buttom.addEventListener('click', (event) => { 
