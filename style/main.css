@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 /* tips */
@@ -65,8 +66,5 @@
 
 /* GAME OVER */
 .page_game-over{
-    background-color: #f6e7d8;
-}
-.gO_color{
-    color: #f14902;
+    background-color: royalblue;
 }

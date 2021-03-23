@@ -1,11 +1,9 @@
 'use strict';
 
 const inputNumberElement = document.querySelector('.js-input');
-
-// const textGameOver = document.querySelector('.js-game_over');
-let counter = 0; // Define counter initial value.
 const buttom = document.querySelector('.js-btn');
 const page = document.querySelector('.js-page');
+let counter = 0; // Define counter initial value.
 
 // Define ramdom number
 const randomNumber = Math.ceil(Math.random() * 100); 
@@ -48,14 +46,12 @@ function gameOver() {
     const pageTitle = document.querySelector('.title');
     const counterText = document.querySelector('.counter_text');
     let delay = 2000;
-    if (counter === 3) {
+    if (counter === 7) {
         tipTextElement.classList.remove('start');
         tipTextElement.classList.remove('high');
         tipTextElement.classList.remove('less');
         tipTextElement.classList.add('game--over');
         page.classList.add('page_game-over');
-        pageTitle.classList.add('gO_color');
-        counterText.classList.add('gO_color');
         buttom.style.pointerEvents = "none";
         setTimeout(function setTime(){document.location.reload();}, delay);
     };
