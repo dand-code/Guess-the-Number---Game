@@ -57,7 +57,7 @@
 }
 
 .btn{
-    display:inline- block;
+    display:inline-block;
     height: 30px;
     width: 80px;
     margin-bottom: 10px;
@@ -88,6 +88,21 @@
     }
     .tips{
         grid-area: tips;
+    }
+
+    .title{
+        font-size: 40px;
+    }
+    .counter_text{
+        font-size: 25px; 
+    }
+
+    .input{
+        height: 35px;
+    }
+    
+    .btn{
+        height: 35px;
     }
 }
 
