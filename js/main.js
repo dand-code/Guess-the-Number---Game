@@ -3,6 +3,7 @@
 const inputNumberElement = document.querySelector('.js-input');
 const buttom = document.querySelector('.js-btn');
 const page = document.querySelector('.js-page');
+const tipTextElement = document.querySelector('.js-tips');
 let counter = 0; // Define counter initial value.
 
 // Define ramdom number
@@ -11,7 +12,6 @@ console.log('The number is:', randomNumber);
 
 // Define tips text
 function guessNumber(event) {
-    const tipTextElement = document.querySelector('.js-tips');
     tipTextElement.classList.add('start');
     const responseDifference = randomNumber - parseInt(inputNumberElement.value);
     let delay = 2000;
